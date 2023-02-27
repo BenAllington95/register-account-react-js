@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
-import RegisterConfirmed from './RegisterConfirmed';
+import React, { useState } from "react";
+import SignIn from "./SignIn"
+import RegisterConfirmed from "./RegisterConfirmed";
 
 export default function Register(props) {
     
     const [form, setForm] = useState({})
     const [registered, setRegistered] = useState(false)
+    const [signIn, setSignIn] = useState(false)
 
     function handleSubmit(e) {
         e.preventDefault()
         setRegistered(true)
+    }
+
+    function haveAccount() {
+        setSignIn(!signIn)
     }
   
     function handleChange(e) {
@@ -98,14 +104,20 @@ export default function Register(props) {
                 </button>
             </form>
 
-            <p className="bold">Already have an account? <span className="cursor accent-text">Sign In</span></p>
+            <p className="bold">Already have an account? <span onClick={haveAccount} className="cursor accent-text">Sign In</span></p>
 
         </div>
         )
 
         return (
             <div className="register">
-                {!registered ? 
+                {signIn ? 
+                
+                <SignIn />                
+                    
+                : 
+
+                !registered ? 
                     registerHtml : 
                     <RegisterConfirmed
                         form={form} 

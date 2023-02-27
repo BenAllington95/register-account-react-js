@@ -85,7 +85,8 @@ body {
             border: none;
             font-weight: bold;
             box-shadow: 0px 1px 0px $secondaryColor;
-            color: #fff;;
+            color: #fff;
+            transition: all 0.1s;
         }
 
         .submit-btn:hover {
