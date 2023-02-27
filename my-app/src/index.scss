@@ -28,6 +28,10 @@ body {
     align-items: center;
     justify-content: center;
 
+    h1 {
+        margin-top: 0;
+    }
+
     p {
         font-size: .8rem;
     }
@@ -84,7 +88,7 @@ body {
     .register {
         @include centerItem();
         width: 65%;
-        
+
         form {
 
             label {
@@ -148,6 +152,13 @@ body {
             padding: 0em 1em;
         }
 
+        .hero {
+            height: 30vh;
+        }
+
+        .register {
+            height: 70vh;
+        }
     }
     
 }

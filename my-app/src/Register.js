@@ -109,11 +109,16 @@ export default function Register(props) {
         </div>
         )
 
+        console.log(registered)
+
         return (
             <div className="register">
                 {signIn ? 
                 
-                <SignIn />                
+                <SignIn
+                    form={form}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit} />                
                     
                 : 
 
