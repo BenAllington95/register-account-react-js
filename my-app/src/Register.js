@@ -18,6 +18,7 @@ export default function Register(props) {
     }
   
     function handleChange(e) {
+        e.preventDefault()
         const {name, value, type, checked} = e.target
         setForm({ ...form, 
             [name]: type === "checkbox" ? checked : value})
