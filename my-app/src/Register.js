@@ -97,11 +97,14 @@ export default function Register(props) {
                     Register
                 </button>
             </form>
+
+            <p className="bold">Already have an account? <span className="cursor accent-text">Sign In</span></p>
+
         </div>
         )
 
         return (
-            <div>
+            <div className="register">
                 {!registered ? 
                     registerHtml : 
                     <RegisterConfirmed

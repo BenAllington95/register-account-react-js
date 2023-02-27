@@ -1,0 +1,104 @@
+$background : #FAF9F6;
+$buttonFontColor : #fff;
+$primaryColor : #000;
+$secondaryColor : #a1a1a1;
+$thirdColor : #542be1;
+
+
+@mixin centerItem() {
+    display: grid;
+    place-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: $background;
+}
+
+.App {
+    margin: 0 auto;
+    height: 100vh;
+    padding: 1em;
+    color: $primaryColor;
+    @include centerItem();
+
+    p {
+        font-size: .8rem;
+    }
+
+    .accent-text {
+        color: $thirdColor;
+    }
+
+    .cursor {
+        cursor: pointer;
+    }
+
+    .bold {
+        font-weight: bold;
+    }  
+
+    button {
+        cursor: pointer;
+    }
+
+    form {
+
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 0.5em;
+            color: $secondaryColor;
+            font-size: 0.8rem;
+        }
+
+        input {
+            margin-bottom: 1em;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid $secondaryColor;
+            letter-spacing: 0.2px;
+        }
+
+        input:active,
+        input:focus {
+            background: #e5dcff;
+            border: 1px solid $thirdColor;
+        }
+
+        input,
+        .submit-btn {
+            padding: 1em;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: $thirdColor;
+            border: none;
+            font-weight: bold;
+            box-shadow: 0px 1px 0px $secondaryColor;
+            color: #fff;;
+        }
+
+        .submit-btn:hover {
+            background: #32CD30;
+        }
+        
+
+    }
+   
+
+    
+      
+
+
+
+}

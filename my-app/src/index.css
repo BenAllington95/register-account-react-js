@@ -1,50 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  background: #FAF9F6;
 }
 
 .App {
-   margin: 0 auto;
-   width: 90%;
-   max-width: 400px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 1em;
+  color: #000;
+  display: grid;
+  place-content: center;
 }
-
-input {
-  margin-bottom: 1em;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.75em;
-  border-radius: 5px;
-  border: 1px solid #353535;;
+.App p {
+  font-size: 0.8rem;
 }
-
-input:active,
-input:focus {
-  background: #DCD0FF;
+.App .accent-text {
+  color: #542be1;
 }
-
-.submit-btn {
-  width: 100%;
-  padding: 0.8em;
-  background: #865DFF;
-  border: none;
-  color: #fff;
-  border-radius: 5px;
+.App .cursor {
   cursor: pointer;
 }
-
-.submit-btn:hover {
-  filter: brightness(105%)
+.App .bold {
+  font-weight: bold;
 }
-
-label {
+.App button {
+  cursor: pointer;
+}
+.App form label {
   font-weight: bold;
   display: inline-block;
   margin-bottom: 0.5em;
+  color: #a1a1a1;
+  font-size: 0.8rem;
 }
-
-.bold {
+.App form input {
+  margin-bottom: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #a1a1a1;
+  letter-spacing: 0.2px;
+}
+.App form input:active,
+.App form input:focus {
+  background: #e5dcff;
+  border: 1px solid #542be1;
+}
+.App form input,
+.App form .submit-btn {
+  padding: 1em;
+  border-radius: 5px;
+}
+.App form .submit-btn {
+  width: 100%;
+  background: #542be1;
+  border: none;
   font-weight: bold;
-  cursor: pointer;
+  box-shadow: 0px 1px 0px #a1a1a1;
+  color: #fff;
 }
+.App form .submit-btn:hover {
+  background: #32CD30;
+}/*# sourceMappingURL=index.css.map */
