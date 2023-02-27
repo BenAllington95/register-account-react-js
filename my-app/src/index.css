@@ -111,12 +111,6 @@ body {
   .App .hero,
   .App .register {
     width: 100%;
-    padding: 0em 1em;
-  }
-  .App .hero {
-    height: 30vh;
-  }
-  .App .register {
-    height: 70vh;
+    min-height: 100vh;
   }
 }/*# sourceMappingURL=index.css.map */
