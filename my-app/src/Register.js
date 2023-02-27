@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
+import RegisterConfirmed from './RegisterConfirmed';
 
 export default function Register(props) {
-
-
+    
     const [form, setForm] = useState({})
-    const [showPassword, setShowPassword] = useState(false)
+    const [registered, setRegistered] = useState(false)
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        setRegistered(true)
+    }
   
     function handleChange(e) {
         const {name, value, type, checked} = e.target
         setForm({ ...form, 
             [name]: type === "checkbox" ? checked : value})
-        }
-  
-    function flipShowPassword() {
-    setShowPassword(!showPassword)
-        }
+    }
 
-return (
+        const registerHtml = (
         <div>
             <h1>Register an account</h1>
-            <form onSubmit={props.handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div className="input-box">
                 <label htmlFor="email">Email</label>
                 <input
@@ -82,7 +83,7 @@ return (
                 </div>
                 
                 <div className="input-box">
-                <label htmlFor="promotions">Sign up for promotions</label>
+                <label htmlFor="checkbox">Sign up for promotions</label>
                 <input
                 type="checkbox"
                 id="checkbox"
@@ -97,4 +98,14 @@ return (
                 </button>
             </form>
         </div>
+        )
+
+        return (
+            <div>
+                {!registered ? 
+                    registerHtml : 
+                    <RegisterConfirmed
+                        form={form} 
+                    />}
+            </div>
   )}

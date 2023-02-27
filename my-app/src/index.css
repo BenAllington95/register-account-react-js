@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .App {
@@ -48,7 +48,3 @@ label {
   font-weight: bold;
   cursor: pointer;
 }
-
-/* .inline-block {
-  display: inline-block;
-} */
