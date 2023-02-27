@@ -7,7 +7,6 @@ export default function RegisterConfirmed(props) {
     function flipShowPassword() {
         setShowPassword(!showPassword)
     }
-    
 
     return (
     <div>

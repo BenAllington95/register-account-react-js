@@ -83,6 +83,9 @@ body {
   background: #e5dcff;
   border: 1px solid #542be1;
 }
+.App .register form input[type=checkbox]:checked {
+  accent-color: #542be1;
+}
 .App .register form input,
 .App .register form .submit-btn {
   padding: 1em;
