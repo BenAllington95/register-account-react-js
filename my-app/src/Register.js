@@ -116,7 +116,7 @@ export default function Register(props) {
                 
                 <SignIn
                     form={form}
-                    />                
+                />                
                     
                 : 
 
