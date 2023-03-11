@@ -30,6 +30,7 @@ export default function SignIn(props) {
                 Sign In
                 </button>
             </form>
+            <p className="bold">Forgot password?</p>
         </div>
 
     )
