@@ -10,7 +10,6 @@ body {
 
 .App {
   margin: 0 auto;
-  height: 100vh;
   color: #000;
   display: flex;
   align-items: center;
@@ -40,13 +39,15 @@ body {
 }
 .App .hero {
   width: 35%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #5c32e5;
   opacity: 1;
   background-size: 36px 36px;
   background-image: repeating-linear-gradient(to right, #542be1, #542be1 1.8px, #5c32e5 1.8px, #5c32e5);
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .App .hero h1,
 .App .hero p {
@@ -59,9 +60,12 @@ body {
   margin-top: 0.5em;
 }
 .App .register {
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 65%;
+  height: 100vh;
 }
 .App .register form label {
   font-weight: bold;
@@ -104,13 +108,18 @@ body {
   background: #32CD30;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 820px) {
   .App {
     flex-direction: column;
   }
   .App .hero,
   .App .register {
     width: 100%;
-    min-height: 100vh;
+  }
+  .App .hero {
+    min-height: 25vh;
+  }
+  .App .register {
+    min-height: 75vh;
   }
 }/*# sourceMappingURL=index.css.map */
